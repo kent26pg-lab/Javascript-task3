@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer ></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <div class="container">
       <div id="settings">
         <h1>QuizMaster</h1>
@@ -17,25 +17,27 @@
           automatisk. Riktig svar vises med en gang, slik at du enkelt kan lede
           runden uten å forberede noe på forhånd.
         </p>
-        <select id="category">
-          <option value="">Velg Kategori!</option>
-        </select>
-        <select id="difficulty">
-          <option value="">Tilfeldig vanskelighetsgrad</option>
-          <option value="easy">Lett</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Vanskelig</option>
-        </select>
-        <input
-          type="number"
-          id="amount"
-          value="5"
-          min="1"
-          max="50"
-          placeholder="Antall spørsmål"
-        />
+        <div class="selection">
+          <select id="category">
+            <option value="">Velg Kategori!</option>
+          </select>
+          <select id="difficulty">
+            <option value="">Tilfeldig vanskelighetsgrad</option>
+            <option value="easy">Lett</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Vanskelig</option>
+          </select>
+          <input
+            type="number"
+            id="amount"
+            value="5"
+            min="1"
+            max="50"
+            placeholder="Antall spørsmål"
+          />
+        </div>
         <button id="startBtn">Start Quiz</button>
       </div>
     </div>
-</body>
+  </body>
 </html>
