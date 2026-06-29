@@ -30,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 600px;
+  width: 450px;
   max-width: 600px;
   padding: 40px 20px;
   border: solid #FF6B35 2px;
@@ -75,6 +75,8 @@ input {
   border-radius: 8px;
   transition: all 0.3s ease;
   width: 100%;
+  display: flex;
+  text-align: center;
 }
 
 select:focus,
