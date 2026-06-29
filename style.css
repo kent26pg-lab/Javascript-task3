@@ -160,6 +160,14 @@ input:focus {
   width: 100%;
 }
 
+#question-number {
+  color: var(--gray-400);
+  font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+  background-color: none;
+}
+
 #quiz p.correct {
   color: #10B981;
   border-color: #10B981;

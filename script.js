@@ -49,17 +49,15 @@ async function start() {
   show();
 }
 
-// Viser nåværende spørsmål
 function show() {
   const q = questions[current];
-  
-  // Blander og sorterer svarene tilfeldig
   const answers = [...q.incorrect_answers, q.correct_answer];
   answers.sort(() => Math.random() - 0.5);
 
-  let html = `<h2>${decode(q.question)}</h2>`;
+  // Endret fra <p> til <div> for å unngå CSS-kræsj
+  let html = `<div class="question-number">Spørsmål ${current + 1} av ${questions.length}</div>`;
+  html += `<h2>${decode(q.question)}</h2>`;
   
-  // Lager en paragraf for hvert svar
   answers.forEach((answer) => {
     const isCorrect = answer === q.correct_answer;
     const className = isCorrect ? 'correct' : 'wrong';
@@ -71,6 +69,7 @@ function show() {
   document.getElementById('quiz').innerHTML = html;
   document.querySelector('.next-btn').addEventListener('click', next);
 }
+
 
 // Går til neste spørsmål
 function next() {
@@ -86,4 +85,7 @@ function next() {
 }
 
 // Lytter på Start Quiz-knappen
-document.getElementBy
+document.getElementById('startBtn').addEventListener('click', start);
+
+// Henter kategorier når siden laster
+loadCategories();
